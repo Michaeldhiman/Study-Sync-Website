@@ -27,7 +27,7 @@ body{
 .header{
     display: flex;
     margin:0 auto;
-    max-width: 1180px;
+    max-width: 1280px;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
@@ -70,6 +70,7 @@ body{
     border-radius: 0.375rem;
     background-color: var(--primary-color);
     padding: 0.75rem 1.5rem;
+    margin-right: 3rem;
     font-size: 1rem;
     font-weight: 600;
     transform: background-color 2s;
@@ -107,7 +108,7 @@ body{
 }
 .content{
     margin:0 auto;
-    max-width:1280px;
+    max-width:1300px;
     display: flex;
     gap:2rem;
     padding:0.6rem;
@@ -118,16 +119,7 @@ body{
     animation:sideleft 1s ease forwards;
     opacity: 0;
 }
-@keyframes sideleft{
-    0%{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+
 .label{
     color: var(--primary-color);
     font-size: 1.1rem;
@@ -182,9 +174,11 @@ body{
     width: 45%;
     margin: 0 auto;
 }
+
 @media (min-width:768px){
     .content{
         flex-direction: row;
+        gap:3.5rem;
     }
     .content-left{
         display: flex;
@@ -201,9 +195,62 @@ body{
         justify-content: flex-start;
     }
     .content-right{
+        padding: 0;
         height:70vh;
     }
     .section-image{
         width: 100%;
     }
+    .description{
+        font-size:1rem;
+        color: var(--gray);
+        max-width: 80%;
+    }
+}
+.company-container{
+    margin-top: 2rem;
+    display: flex;
+    gap:1.2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation:sideleft 1s ease forwards;
+    opacity: 0;
+}
+@keyframes sideleft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.company-grid{
+    display: grid;
+    border-radius: 0.625rem;
+    grid-template-columns: repeat(2,1fr);
+    gap:1.2rem;
+    background-color: var(--light-gray);
+    padding: 1rem 2rem;
+}
+@media (min-width:640px){
+    .company-grid{
+        grid-template-columns: repeat(4,1fr);
+        margin-bottom: 1rem;
+    }
+}
+.company-logo{
+    color: var(--gray);
+    font-size: 1rem;
+    font-family: 500;
+    display: flex;
+    gap:0.5rem;
+}
+.svg-img{
+    height: 1.2rem;
+}
+.logo-text{
+    font-size: 1rem;
 }
