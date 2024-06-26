@@ -17,6 +17,7 @@
     font-family:'Inter',sans-serif;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
 body{
     height: 100vh;
@@ -495,4 +496,102 @@ body{
 .policy{
     font-size: 0.76rem;
     color:#777
+}
+.footer-container{
+    background-color:var(--background-color) ;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 2rem;
+    flex-direction: column;
+    max-width: 1280px;
+}
+.footer{
+    display: flex;
+    text-align: left;
+    padding:1rem;
+    gap:1.5rem;
+   justify-content: space-between;
+}
+@media (max-width:931px){
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-left{
+        padding-left: 7rem;
+    }
+    .footer-grid{
+        align-self:center;
+        justify-content: space-evenly;
+    }
+
+}
+
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:1rem;
+    width: 48%;
+}
+.footer-logo{
+width: 50%;
+font-weight: bold;
+font-size: 1.2rem;
+}
+.footer-text{
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+.social{
+    display: flex;
+    gap: 1.5rem;
+}
+.social-icon{
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+.footer-column h2{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 5rem;
+}
+@media (max-width:730px) {
+    .footer-grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 3rem;
+    }
+    .footer-left{
+        padding-left: 1rem;
+    }
+}
+@media (max-width:420px) {
+    .footer-grid{
+        grid-template-columns:1fr;
+        grid-gap: 3rem;
+    }
+    .footer-left{
+        padding-left: 1rem;
+    }
+}
+.footer-link{
+    color: #777;
+    font-size: 0.9rem;
+}
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.footer-copyright{
+    color: var(--gray);
+    font-size: 0.75rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
 }
